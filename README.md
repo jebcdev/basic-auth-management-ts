@@ -2,12 +2,13 @@
 
 ¡Bienvenido a **Basic Auth Management Ts**! 🎉 Este proyecto es una implementación básica de un sistema de autenticación y gestión de usuarios y roles usando **TypeScript**, **TypeORM**, **class-validator**, **class-transformer** y **MySQL**. 🛠️
 
+-   **Teoría básica** conceptos generáles. 📚
+-   **Instalación y configuración** de TypeORM con MySQL, class-validator y class-transformer. 
+
 ## 🚀 Próximamente...
 
 En este proyecto, exploraremos cómo implementar un sistema de autenticación básico, por aca una introducción:
 
--   **Teoría básica** conceptos generáles. 📚
--   **Instalación y configuración** de TypeORM con MySQL, class-validator y class-transformer. 🛠️
 -   **CRUD de Roles**: Crear, leer, actualizar y eliminar roles. 👥
 -   **CRUD de Usuarios**: Crear, leer, actualizar y eliminar usuarios. 👤
 -   **Módulo de Autenticación**: Login, registro y perfil de usuario. 🔐
