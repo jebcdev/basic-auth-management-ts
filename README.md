@@ -63,7 +63,7 @@ git clone https://github.com/jebcdev/basic-auth-management-ts/
 
 ## 📜 Licencia
 
-Este proyecto está bajo la licencia **MIT**. Para más detalles, consulta el archivo [LICENSE](LICENSE).
+Este proyecto está bajo la licencia **MIT**.
 
 ---
 
