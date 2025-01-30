@@ -1,4 +1,4 @@
-## **Tutorial Completo: TypeORM, class-transformer y class-validator**
+## **TypeORM, class-transformer y class-validator**
 
 ---
 
