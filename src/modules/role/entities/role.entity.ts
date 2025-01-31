@@ -4,10 +4,12 @@ import {
     PrimaryGeneratedColumn,
     CreateDateColumn,
     DeleteDateColumn,
+    BaseEntity,
+    UpdateDateColumn,
 } from "typeorm";
 
 @Entity("roles")
-export class RoleEntity {
+export class RoleEntity extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -30,7 +32,7 @@ export class RoleEntity {
     })
     created_at: Date;
 
-    @DeleteDateColumn({
+    @UpdateDateColumn({
         type: "timestamp",
         nullable: false,
     })

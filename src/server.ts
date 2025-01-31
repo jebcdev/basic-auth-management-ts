@@ -32,7 +32,7 @@ export class Server {
     // Método privado para configurar las rutas
     private routes(): void {
         const routes: RootRoutes = new RootRoutes(); // Instancia las rutas del Root
-        this.app.use("/", routes.router); // Usar las rutas definidas
+        this.app.use(this.apiPrefix, routes.router); // Usar las rutas definidas
     }
     // Método público para iniciar el servidor
     public listen(): void {

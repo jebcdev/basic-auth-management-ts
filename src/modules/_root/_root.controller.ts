@@ -1,4 +1,6 @@
 import { Request, Response } from "express";
+import { DatabaseConnectcion } from "../database/DatabaseConnection";
+import { RoleEntity } from "../role";
 
 export class RootController {
     // Variable para almacenar el prefijo de la API
@@ -12,6 +14,7 @@ export class RootController {
     // Método para manejar la solicitud a la ruta raíz
     static root(_req: Request, res: Response): void {
         try {
+
             res.status(200).json({
                 message: "Welcome to the API",
                 data: {

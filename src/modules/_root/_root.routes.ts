@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { RootController } from "./_root.controller";
+import { RoleRoutes } from "../role";
 
 export class RootRoutes {
   // Propiedad pública para el enrutador
@@ -18,6 +19,7 @@ export class RootRoutes {
   // Método privado para definir las rutas
   private initializeRoutes(): void {
     // Registrar la ruta raíz usando el prefijo de la API
-    this.router.get(this.apiPrefix,RootController.root.bind(RootController));    
+    this.router.get("/",RootController.root.bind(RootController));    
+    this.router.use("/roles", new RoleRoutes().router);
   }
 }
