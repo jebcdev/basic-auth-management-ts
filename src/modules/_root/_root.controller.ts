@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
-import { DatabaseConnectcion } from "../database/DatabaseConnection";
-import { RoleEntity } from "../role";
+
 
 export class RootController {
     // Variable para almacenar el prefijo de la API

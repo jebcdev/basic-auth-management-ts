@@ -1,0 +1,123 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "basic-auth-management-ts",
+    "collectionId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+    "dateExported": "2025-02-01T12:24:13.258Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "54f17de2-63c2-4419-b768-368aca2f223c",
+            "name": "Root",
+            "containerId": "",
+            "created": "2025-02-01T12:20:29.771Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "8cf918fe-d02d-4667-8e33-874109261f9d",
+            "name": "Roles",
+            "containerId": "",
+            "created": "2025-02-01T12:20:51.274Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7b12d7d6-44b4-4889-8286-5bb8520d5ebb",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "54f17de2-63c2-4419-b768-368aca2f223c",
+            "name": "Root",
+            "url": "http://localhost:4000/api/v1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-02-01T12:20:34.737Z",
+            "modified": "2025-02-01T12:21:00.757Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "03092586-78ba-48c9-8791-20b7ae2b8bf6",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "8cf918fe-d02d-4667-8e33-874109261f9d",
+            "name": "GetAll",
+            "url": "http://localhost:4000/api/v1/roles",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-01T12:21:12.207Z",
+            "modified": "2025-02-01T12:22:03.079Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "767ad346-6d74-4014-846c-7fec9737e6db",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "8cf918fe-d02d-4667-8e33-874109261f9d",
+            "name": "GetById",
+            "url": "http://localhost:4000/api/v1/roles/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-01T12:21:31.593Z",
+            "modified": "2025-02-01T12:22:51.646Z",
+            "headers": []
+        },
+        {
+            "_id": "b6de761a-d755-40a9-a94e-944b62cd160b",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "8cf918fe-d02d-4667-8e33-874109261f9d",
+            "name": "CreateNew",
+            "url": "http://localhost:4000/api/v1/roles/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-01T12:21:49.409Z",
+            "modified": "2025-02-01T12:22:42.834Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"New Role\",\n  \"description\":\"It is a test\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9a3f2482-2395-417a-b651-600bc4074eb4",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "8cf918fe-d02d-4667-8e33-874109261f9d",
+            "name": "UpdateById",
+            "url": "http://localhost:4000/api/v1/roles/3",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2025-02-01T12:22:56.080Z",
+            "modified": "2025-02-01T12:23:12.487Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"New Role | Updated\",\n  \"description\":\"It is a test\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "904dc2f6-46b7-440f-96a2-126f6da565fc",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "8cf918fe-d02d-4667-8e33-874109261f9d",
+            "name": "DeleteById",
+            "url": "http://localhost:4000/api/v1/roles/3",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2025-02-01T12:23:19.898Z",
+            "modified": "2025-02-01T12:23:28.546Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"New Role | Updated\",\n  \"description\":\"It is a test\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "hZ7eHsNt6jOLbbmeOiZqGwjDwpMudztWRj7KcsVdAPlxpzPPIUpEr2cT4KLAYUUN-S0J0UVs06zg3eCx3BaS4Q"
+}

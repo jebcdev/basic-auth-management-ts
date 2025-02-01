@@ -3,7 +3,8 @@ import cors from "cors";
 import helmet from "helmet";
 import express, { Application } from "express";
 import { RootRoutes } from "./modules/_root/_root.routes";
-import { DatabaseConnectcion } from "./modules/database/DatabaseConnection";
+import { DatabaseConnection } from "./modules/database/DatabaseConnection";
+
 
 export class Server {
     // Propiedades privadas de la clase Server
@@ -37,7 +38,7 @@ export class Server {
     // Método público para iniciar el servidor
     public listen(): void {
         try {
-            DatabaseConnectcion.appDataSource
+            DatabaseConnection.appDataSource
                 .initialize()
                 .then(() => {
                     console.log("Database Connected");
