@@ -10,8 +10,10 @@
 
 En este proyecto, exploraremos cómo implementar un sistema de autenticación básico, por aca una introducción:
 
-
 -   **CRUD de Usuarios**: Crear, leer, actualizar y eliminar usuarios. 👤
+    ❌❌❌: Corregir    que no se pueda crear un usuario sin un role existente
+    ❌❌❌: Corregir    como se guardan las contraseñas
+    ❌❌❌: Corregir    archivos de barril, dejar de usarlos
 -   **Módulo de Autenticación**: Login, registro y perfil de usuario. 🔐
 -   **Protección de Rutas**: Restringir el acceso a rutas según el rol del usuario. 🛡️
 

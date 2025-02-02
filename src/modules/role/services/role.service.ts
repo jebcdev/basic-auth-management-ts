@@ -2,10 +2,11 @@
 import { DeleteResult, Repository, UpdateResult } from "typeorm";
 
 // Importa la entidad RoleEntity y la interfaz IRoleRepository desde el módulo principal.
-import { RoleEntity, IRoleRepository } from "../";
+import {  IRoleRepository } from "../";
 
 // Importa la clase DatabaseConnection para obtener la conexión a la base de datos.
 import { DatabaseConnection } from "../../database/DatabaseConnection";
+import { RoleEntity } from "../entities/role.entity";
 
 // Define la clase RoleService que implementa la interfaz IRoleRepository.
 export class RoleService implements IRoleRepository {
@@ -24,12 +25,18 @@ export class RoleService implements IRoleRepository {
             order: {
                 id: "DESC",
             },
+            relations: ["users"],
         });
     }
 
     // Busca un rol por su ID y lo devuelve si existe, de lo contrario, retorna null.
     public async getById(id: number): Promise<RoleEntity | null> {
-        return await this.repository.findOneBy({ id });
+        return await this.repository.findOne({
+            where: {
+                id: id,
+            },
+            relations: ["users"],
+         });
     }
 
     // Busca un rol por su nombre y lo devuelve si existe, de lo contrario, retorna null.

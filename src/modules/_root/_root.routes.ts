@@ -1,6 +1,7 @@
-import { Router } from "express";
-import { RootController } from "./_root.controller";
-import { RoleRoutes } from "../role";
+import { Router } from "express"; // Importa el enrutador de Express
+import { RootController } from "./_root.controller"; // Importa el controlador de la raíz
+import { RoleRoutes } from "../role"; // Importa las rutas de los roles
+import { UserRoutes } from "../user"; // Importa las rutas de los usuarios
 
 export class RootRoutes {
   // Propiedad pública para el enrutador
@@ -20,6 +21,7 @@ export class RootRoutes {
   private initializeRoutes(): void {
     // Registrar la ruta raíz usando el prefijo de la API
     this.router.get("/",RootController.root.bind(RootController));    
-    this.router.use("/roles", new RoleRoutes().router);
+    this.router.use("/roles", new RoleRoutes().router); // Registrar las rutas de los roles
+    this.router.use("/users", new UserRoutes().router); // Registrar las rutas de los usuarios
   }
 }

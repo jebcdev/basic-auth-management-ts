@@ -14,4 +14,4 @@ import { RoleController } from "./controllers/role.controller";
 import { RoleRoutes } from "./routes/role.routes";
 
 // Reexporta todas las entidades, interfaces, servicios, controladores y rutas, facilitando su importación desde un único archivo.
-export { RoleEntity, IRoleRepository, RoleService, RoleController, RoleRoutes };
+export { /* RoleEntity, */ IRoleRepository, RoleService, RoleController, RoleRoutes };

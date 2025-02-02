@@ -4,8 +4,9 @@ import "reflect-metadata";
 // Importa la clase DataSource de TypeORM, que se usa para configurar la conexión a la base de datos.
 import { DataSource } from "typeorm";
 
-// Importa la entidad RoleEntity, que será utilizada en la configuración de TypeORM.
-import { RoleEntity } from "../role";
+// Importa lsa entidades que serán utilizada en la configuración de TypeORM.
+import { RoleEntity } from "../role/entities/role.entity"; 
+import { UserEntity } from "../user/entities/user.entity"; 
 
 // importa la configuracion de la base de datos
 import { DatabaseConfig } from "../../core";
@@ -22,7 +23,7 @@ export class DatabaseConnection {
         username: DatabaseConfig.username,         // Nombre de usuario para la autenticación en la base de datos.
         password: DatabaseConfig.password,             // Contraseña para la autenticación (⚠️ Evitar credenciales en código fuente).
         database: DatabaseConfig.database,  // Nombre de la base de datos a la que se conectará.
-        entities: [RoleEntity],   // Lista de entidades que manejará TypeORM en la base de datos.
+        entities: [RoleEntity,UserEntity],   // Lista de entidades que manejará TypeORM en la base de datos.
         synchronize: true,        // Permite que TypeORM sincronice la base de datos automáticamente con los modelos (⚠️ No recomendado en producción).
         logging: true,            // Habilita el registro de consultas SQL en la consola para depuración.
     });
