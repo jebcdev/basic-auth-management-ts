@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "basic-auth-management-ts",
     "collectionId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
-    "dateExported": "2025-02-01T12:24:13.258Z",
+    "dateExported": "2025-02-02T15:35:11.774Z",
     "version": "1.2",
     "folders": [
         {
@@ -18,6 +18,13 @@
             "containerId": "",
             "created": "2025-02-01T12:20:51.274Z",
             "sortNum": 20000
+        },
+        {
+            "_id": "2ef3d3a5-6add-4f7f-882e-eb0fdff70a8d",
+            "name": "Users",
+            "containerId": "",
+            "created": "2025-02-02T13:37:11.968Z",
+            "sortNum": 30000
         }
     ],
     "requests": [
@@ -56,15 +63,44 @@
             ]
         },
         {
+            "_id": "d9548695-7843-473f-89ec-0554f09ff352",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "2ef3d3a5-6add-4f7f-882e-eb0fdff70a8d",
+            "name": "GetAll",
+            "url": "http://localhost:4000/api/v1/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-02T13:37:11.969Z",
+            "modified": "2025-02-02T13:37:21.805Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
             "_id": "767ad346-6d74-4014-846c-7fec9737e6db",
             "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
             "containerId": "8cf918fe-d02d-4667-8e33-874109261f9d",
             "name": "GetById",
-            "url": "http://localhost:4000/api/v1/roles/3",
+            "url": "http://localhost:4000/api/v1/roles/1",
             "method": "GET",
             "sortNum": 30000,
             "created": "2025-02-01T12:21:31.593Z",
-            "modified": "2025-02-01T12:22:51.646Z",
+            "modified": "2025-02-02T15:28:53.059Z",
+            "headers": []
+        },
+        {
+            "_id": "231a2954-2d20-45f3-808f-887ea1197a0b",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "2ef3d3a5-6add-4f7f-882e-eb0fdff70a8d",
+            "name": "GetById",
+            "url": "http://localhost:4000/api/v1/users/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-02T13:37:11.970Z",
+            "modified": "2025-02-02T15:30:39.214Z",
             "headers": []
         },
         {
@@ -76,11 +112,28 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2025-02-01T12:21:49.409Z",
-            "modified": "2025-02-01T12:22:42.834Z",
+            "modified": "2025-02-02T15:28:42.726Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"New Role\",\n  \"description\":\"It is a test\"\n}",
+                "raw": "{\n  \"name\":\"Admin\",\n  \"description\":\"It is a test\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b14b76de-8cac-4c4c-bcb0-06e84b9692b0",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "2ef3d3a5-6add-4f7f-882e-eb0fdff70a8d",
+            "name": "CreateNew",
+            "url": "http://localhost:4000/api/v1/users/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-02T13:37:11.971Z",
+            "modified": "2025-02-02T15:32:36.567Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Administrator\",\n  \"surname\":\"System\",\n  \"email\":\"admin@admin.com\",\n  \"password\":\"12345678\",\n  \"roleId\":1\n}",
                 "form": []
             }
         },
@@ -93,11 +146,28 @@
             "method": "PATCH",
             "sortNum": 50000,
             "created": "2025-02-01T12:22:56.080Z",
-            "modified": "2025-02-01T12:23:12.487Z",
+            "modified": "2025-02-02T15:30:19.714Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"New Role | Updated\",\n  \"description\":\"It is a test\"\n}",
+                "raw": "{\n   \"description\":\"System Administrator\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8ca40e72-2380-441b-bb4c-6acf9a3174c5",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "2ef3d3a5-6add-4f7f-882e-eb0fdff70a8d",
+            "name": "UpdateById",
+            "url": "http://localhost:4000/api/v1/users/1",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2025-02-02T13:37:11.972Z",
+            "modified": "2025-02-02T15:34:36.256Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"surname\":\"System Super User\"\n}",
                 "form": []
             }
         },
@@ -106,11 +176,23 @@
             "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
             "containerId": "8cf918fe-d02d-4667-8e33-874109261f9d",
             "name": "DeleteById",
-            "url": "http://localhost:4000/api/v1/roles/3",
+            "url": "http://localhost:4000/api/v1/roles/1",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2025-02-01T12:23:19.898Z",
-            "modified": "2025-02-01T12:23:28.546Z",
+            "modified": "2025-02-02T15:29:21.527Z",
+            "headers": []
+        },
+        {
+            "_id": "76c0e785-4c3e-4c2b-a7d1-311f3d4ce0ed",
+            "colId": "6edd4c80-fd2f-40f3-84f9-662ae89dc3aa",
+            "containerId": "2ef3d3a5-6add-4f7f-882e-eb0fdff70a8d",
+            "name": "DeleteById",
+            "url": "http://localhost:4000/api/v1/users/1",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2025-02-02T13:37:11.973Z",
+            "modified": "2025-02-02T15:34:43.353Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -119,5 +201,5 @@
             }
         }
     ],
-    "ref": "hZ7eHsNt6jOLbbmeOiZqGwjDwpMudztWRj7KcsVdAPlxpzPPIUpEr2cT4KLAYUUN-S0J0UVs06zg3eCx3BaS4Q"
+    "ref": "hZ7eHsNt6jOLbbmeOiZqGy7ZRIx4zGNpDff3vpBA32auX7Dgzqe3-e3sIAidxJbF8sDRW_O5AfGDO8Gf-LNsCQ"
 }

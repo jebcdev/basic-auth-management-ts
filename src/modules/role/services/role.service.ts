@@ -2,7 +2,7 @@
 import { DeleteResult, Repository, UpdateResult } from "typeorm";
 
 // Importa la entidad RoleEntity y la interfaz IRoleRepository desde el módulo principal.
-import {  IRoleRepository } from "../";
+import { IRoleRepository } from "../repositories/irole.repository"; 
 
 // Importa la clase DatabaseConnection para obtener la conexión a la base de datos.
 import { DatabaseConnection } from "../../database/DatabaseConnection";

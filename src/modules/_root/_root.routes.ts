@@ -1,7 +1,7 @@
 import { Router } from "express"; // Importa el enrutador de Express
 import { RootController } from "./_root.controller"; // Importa el controlador de la raíz
-import { RoleRoutes } from "../role"; // Importa las rutas de los roles
-import { UserRoutes } from "../user"; // Importa las rutas de los usuarios
+import { RoleRoutes } from "../role/routes/role.routes"; // Importa las rutas de los roles
+import { UserRoutes } from "../user/routes/user.routes";  // Importa las rutas de los usuarios
 
 export class RootRoutes {
   // Propiedad pública para el enrutador

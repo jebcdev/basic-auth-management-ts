@@ -11,13 +11,15 @@ import { validate, ValidationError } from "class-validator";
 import { UpdateResult } from "typeorm"
 
 // Importa las entidades y servicios que gestionan los roles.
-import {  RoleService } from "../";
+import { RoleService } from "../services/role.service";
 
 // Importa los DTOs (Data Transfer Objects) para la creación y actualización de roles.
-import { CreateRoleDto, UpdateRoleDto } from "../dtos";
+import { CreateRoleDto } from "../dtos/create-role.dto"; 
+import { UpdateRoleDto } from "../dtos/update-role.dto";
+
+// Importa la entidad de rol para definir el tipo de respuesta de los controladores.
 import { RoleEntity } from "../entities/role.entity";
 
-;
 
 export class RoleController {
 

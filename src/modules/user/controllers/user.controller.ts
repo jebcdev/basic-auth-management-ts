@@ -11,13 +11,14 @@ import { validate, ValidationError } from "class-validator";
 import { UpdateResult } from "typeorm"
 
 // Importa las entidades y servicios que gestionan los usuarios.
-import {  UserService } from "../";
+import { UserService } from "../services/user.service";
 
 // Importa los DTOs (Data Transfer Objects) para la creación y actualización de usuarios.
-import { CreateUserDto, UpdateUserDto } from "../dtos";
-import { UserEntity } from "../entities/user.entity";
+import { CreateUserDto } from "../dtos/create-user.dto"; 
+import { UpdateUserDto } from "../dtos/update-user.dto";
 
-;
+// Importa la entidad de usuario para las operaciones de base de datos.
+import { UserEntity } from "../entities/user.entity";
 
 export class UserController {
 

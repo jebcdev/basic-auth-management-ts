@@ -2,10 +2,10 @@
 import { Router } from "express";
 
 // Importa el controlador de usuarios para asociarlo con las rutas.
-import { UserController } from "../";
+import { UserController } from "../controllers/user.controller";
 
 // Importa el middleware que valida el ID de la ruta.
-import { VerifyIdMiddleware } from "../../../core/";
+import { VerifyIdMiddleware } from "../../../core/middlewares/verifyId.middleware"; 
 
 export class UserRoutes {
     // Propiedad pública que representa el enrutador de Express.

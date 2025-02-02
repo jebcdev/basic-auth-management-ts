@@ -9,7 +9,7 @@ import { RoleEntity } from "../role/entities/role.entity";
 import { UserEntity } from "../user/entities/user.entity"; 
 
 // importa la configuracion de la base de datos
-import { DatabaseConfig } from "../../core";
+import { DatabaseConfig } from "../../core/config/database.config";
 
 
 // Define una clase para manejar la conexión a la base de datos.

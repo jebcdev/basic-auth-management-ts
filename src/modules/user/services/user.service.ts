@@ -2,7 +2,7 @@
 import { DeleteResult, Repository, UpdateResult } from "typeorm";
 
 // Importa la entidad UserEntity y la interfaz IUserRepository desde el módulo principal.
-import {  IUserRepository } from "../";
+import { IUserRepository } from "../repositories/iuser.repository"; 
 
 
 // Importa la clase DatabaseConnection para obtener la conexión a la base de datos.
