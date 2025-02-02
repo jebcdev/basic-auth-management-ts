@@ -15,20 +15,13 @@ export class JwtUtil {
      * @returns El token generado.
      * @throws Error si el usuario no existe o si ocurre un error al generar el token.
      */
-    /* public static async generateToken(email: string): Promise<string> {
+    public static async generateToken(data: object): Promise<string> {
         try {
-            // Obtener los datos del usuario
-            const userData = await UserService.getByEmail(email);
-
-            if (!userData) {
-                throw new Error("User not found");
-            }
-
+            
             // Generar el token
             const token = jwt.sign(
                 {
-                    email,
-                    isAdmin: userData.isAdmin,
+                   data
                 },
                 this.JWT_SECRET,
                 {
@@ -45,7 +38,7 @@ export class JwtUtil {
             console.error("Error generating token:", error);
             throw new Error("Error generating token");
         }
-    } */
+    }
 
     /**
      * Verifica un token JWT.
