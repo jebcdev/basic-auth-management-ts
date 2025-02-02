@@ -5,43 +5,11 @@
 -   **Teoría básica** conceptos generáles. 📚
 -   **Instalación y configuración** de TypeORM con MySQL, class-validator y class-transformer.
 -   **CRUD de Roles**: Crear, leer, actualizar y eliminar roles. 👥
+-   **CRUD de Usuarios**: Crear, leer, actualizar y eliminar usuarios. 👤
 
 ## 🚀 Próximamente...
 
 En este proyecto, exploraremos cómo implementar un sistema de autenticación básico, por aca una introducción:
-
--   **CRUD de Usuarios**: Crear, leer, actualizar y eliminar usuarios. 👤
-    ❌❌❌: Corregir que no se pueda crear un usuario sin un role existente
-    Correcciones a implementar:
-    en el UserEntity:
-
-            @Column({
-                nullable: false,   // No permite valores nulos.
-            })
-            role_id: number;
-
-            /* Definir Relaciones */
-            @ManyToOne(() => RoleEntity, (role) => role.users, { eager: true }) // Carga el rol automáticamente si se desea
-            @JoinColumn({ name: "role_id" }) // Esto crea la columna roleId en la tabla de usuarios
-            role: RoleEntity;
-
-    Tambien en los dto:
-        //create:
-        @IsNotEmpty()
-        @IsInt() // Asegura que sea un número entero
-        @Min(1)  // Evita valores menores que 1
-        role_id: number;
-
-        //update:
-        // Indica que el campo "role" es opcional en la solicitud.
-        @IsOptional()
-        @IsNotEmpty()
-        @IsInt() // Asegura que sea un número entero
-        @Min(1) // Evita valores menores que 1
-        role_id: number;
-
-    ❌❌❌: Corregir que guarde los datos de la relacion al crear un usuario
-    ❌❌❌: Corregir como se guardan las contraseñas
 
 -   **Módulo de Autenticación**: Login, registro y perfil de usuario. 🔐
 -   **Protección de Rutas**: Restringir el acceso a rutas según el rol del usuario. 🛡️

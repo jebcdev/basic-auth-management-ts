@@ -8,6 +8,7 @@ import {
     BaseEntity,           // Permite utilizar métodos ORM como find(), save(), remove(), etc.
     UpdateDateColumn,
     ManyToOne,
+    JoinColumn,
 } from "typeorm";
 import { RoleEntity } from "../../role/entities/role.entity"; 
 
@@ -18,6 +19,12 @@ export class UserEntity extends BaseEntity { // Hereda de BaseEntity para usar m
     // Identificador único del usuario (clave primaria autoincremental).
     @PrimaryGeneratedColumn()
     id: number;
+
+    // Columna para almacenar el identificador del rol del usuario.
+    @Column({
+        nullable: false,   // No permite valores nulos.
+    })
+    role_id: number;
 
     // Columna para almacenar el nombre del usuario.
     @Column({
@@ -45,13 +52,13 @@ export class UserEntity extends BaseEntity { // Hereda de BaseEntity para usar m
     @Column({
         length: 100,       // Limita la longitud máxima a 100 caracteres.
         nullable: false,   // No permite valores nulos.
-        unique: true,      // Asegura que la contraseña sea única (esto no es una buena práctica en producción).
     })
     password: string;
 
     /* Definir Relaciones */
-    @ManyToOne(()=>RoleEntity,(role)=>role.users)
-    role:RoleEntity;
+    @ManyToOne(()=>RoleEntity,(role)=>role.users/* , { eager: true } */) //habilitar el eager para que traiga el rol
+    @JoinColumn({ name: "role_id" }) // Esto crea la columna roleId en la tabla de usuarios
+    role: RoleEntity;
 
     // Columna que almacena automáticamente la fecha y hora de creación del registro.
     @CreateDateColumn({

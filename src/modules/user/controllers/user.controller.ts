@@ -19,6 +19,7 @@ import { UpdateUserDto } from "../dtos/update-user.dto";
 
 // Importa la entidad de usuario para las operaciones de base de datos.
 import { UserEntity } from "../entities/user.entity";
+import { BcryptUtil } from "../../../utils/bcrypt.util";
 
 export class UserController {
 
@@ -122,6 +123,9 @@ export class UserController {
                 });
             }
 
+            // Hashea la contraseña antes de guardarla en la base de datos.
+            dto.password=await BcryptUtil.hashPassword(dto.password);
+
             // Crea el nuevo usuario usando el servicio y el DTO.
             const data: UserEntity | null = await this.service.createNew(
                 plainToInstance(UserEntity, dto)
@@ -138,7 +142,17 @@ export class UserController {
             // Si el usuario fue creado correctamente, lo devuelve con un mensaje de éxito.
             return res.status(201).json({
                 message: "User Created Successfully",
-                data,
+                data:{
+                    id:data?.id,
+                    name:data?.name,
+                    surname:data?.surname,
+                    email:data?.email,
+                    role:{
+                        id:data?.role?.id,
+                        name:data?.role?.name
+                    },
+                    createdAt:data.created_at
+                },
             });
         } catch (error) {
             // Maneja cualquier error inesperado y devuelve un mensaje de error.
@@ -185,6 +199,9 @@ export class UserController {
                 });
             }
 
+            // verifica si viene la contraseña para actualizarla
+            if(dto.password) dto.password=await BcryptUtil.hashPassword(dto.password);
+
             // Actualiza el usuario por su ID usando el servicio.
             const updatedData: UpdateResult | null = await this.service.updateById(
                 id,
@@ -199,10 +216,24 @@ export class UserController {
                 });
             }
 
+            // Llama al servicio para obtener el usuario actualizado por su ID.
+            const data: UserEntity | null = await this.service.getById(id);
+
             // Si la actualización fue exitosa, devuelve el usuario actualizado con un mensaje de éxito.
             return res.status(200).json({
                 message: "User Updated Successfully",
-                data: await this.service.getById(id),
+                data:{
+                    id:data?.id,
+                    name:data?.name,
+                    surname:data?.surname,
+                    email:data?.email,
+                    role:{
+                        id:data?.role?.id,
+                        name:data?.role?.name
+                    },
+                    createdAt:data?.created_at
+                },
+                
             });
         } catch (error) {
             // Maneja cualquier error inesperado y devuelve un mensaje de error.

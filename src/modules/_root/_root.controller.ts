@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 
-
 export class RootController {
     // Variable para almacenar el prefijo de la API
     private readonly apiPrefix: string;
@@ -11,8 +10,9 @@ export class RootController {
     }
 
     // Método para manejar la solicitud a la ruta raíz
-    static root(_req: Request, res: Response): void {
+    static async root(_req: Request, res: Response): Promise<void> {
         try {
+            // Enviar respuesta exitosa al cliente
 
             res.status(200).json({
                 message: "Welcome to the API",
