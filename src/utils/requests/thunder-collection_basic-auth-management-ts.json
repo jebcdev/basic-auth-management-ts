@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "basic-auth-management-ts",
     "collectionId": "0ace1979-fd34-4536-adfe-c5def9091371",
-    "dateExported": "2025-02-03T13:09:55.477Z",
+    "dateExported": "2025-02-03T22:24:36.984Z",
     "version": "1.2",
     "folders": [
         {
@@ -40,11 +40,11 @@
             "colId": "0ace1979-fd34-4536-adfe-c5def9091371",
             "containerId": "0b63475e-c7db-40a8-b4bc-a03fecc2d002",
             "name": "Root",
-            "url": "http://localhost:4000/api/v1",
+            "url": "http://localhost:4000/api/v1/",
             "method": "GET",
             "sortNum": 10000,
             "created": "2025-02-02T22:40:45.957Z",
-            "modified": "2025-02-02T22:40:45.957Z",
+            "modified": "2025-02-03T13:59:47.757Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -79,6 +79,23 @@
             "sortNum": 20000,
             "created": "2025-02-02T22:40:45.963Z",
             "modified": "2025-02-02T22:40:45.963Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "50be1435-fdea-4103-aed0-d0e498e3d91e",
+            "colId": "0ace1979-fd34-4536-adfe-c5def9091371",
+            "containerId": "0b63475e-c7db-40a8-b4bc-a03fecc2d002",
+            "name": "Seeder",
+            "url": "http://localhost:4000/api/v1/seed/rolesusers",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-03T13:59:23.962Z",
+            "modified": "2025-02-03T22:09:37.620Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -136,11 +153,11 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2025-02-02T22:40:45.965Z",
-            "modified": "2025-02-02T22:40:45.965Z",
+            "modified": "2025-02-03T13:43:46.999Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Administrator\",\n  \"surname\":\"System\",\n  \"email\":\"admin@admin.com\",\n  \"password\":\"12345678\",\n  \"roleId\":1\n}",
+                "raw": "{\n  \"name\":\"Administrator\",\n  \"surname\":\"System\",\n  \"email\":\"admin@admin.commm\",\n  \"password\":\"12345678\",\n  \"role_id\":1\n}",
                 "form": []
             }
         },
@@ -166,15 +183,15 @@
             "colId": "0ace1979-fd34-4536-adfe-c5def9091371",
             "containerId": "d30cdf02-3ee5-40af-97b4-c46305b4f8ba",
             "name": "UpdateById",
-            "url": "http://localhost:4000/api/v1/users/2",
+            "url": "http://localhost:4000/api/v1/users/1",
             "method": "PATCH",
             "sortNum": 50000,
             "created": "2025-02-02T22:40:45.966Z",
-            "modified": "2025-02-02T22:42:20.175Z",
+            "modified": "2025-02-03T21:57:37.954Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"role_id\":2\n}",
+                "raw": "{\n    \"password\":\"12345678\"\n}",
                 "form": []
             }
         },
@@ -216,7 +233,7 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2025-02-02T23:08:40.960Z",
-            "modified": "2025-02-03T12:36:14.321Z",
+            "modified": "2025-02-03T21:58:19.649Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -225,7 +242,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "// {\n//   \"email\":\"admin@admin.com\",\n//   \"password\":\"12345678\"\n// }\n\n{\n  \"email\":\"user@user.com\",\n  \"password\":\"12345678\"\n}\n\n",
+                "raw": "{\n  \"email\":\"admin@admin.commm\",\n  \"password\":\"12345678\"\n}\n\n// {\n//   \"email\":\"user@user.com\",\n//   \"password\":\"12345678\"\n// }\n\n",
                 "form": []
             }
         },
@@ -238,7 +255,7 @@
             "method": "POST",
             "sortNum": 80000,
             "created": "2025-02-03T01:45:21.167Z",
-            "modified": "2025-02-03T12:36:34.354Z",
+            "modified": "2025-02-03T21:58:31.548Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -247,7 +264,7 @@
             ],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjIsInVzZXJfaWQiOjJ9LCJpYXQiOjE3Mzg1ODYxNzQsImV4cCI6MTczODU4OTc3NH0.yrn0dQ-x8eSX22gCRus4uPYH297w3iJ0bYIhmy6y9Fc"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjEsInVzZXJfaWQiOjF9LCJpYXQiOjE3Mzg2MTk4OTksImV4cCI6MTczODYyMzQ5OX0.57t96OOZaYcx9KIk3MvNL7K3D3bA49LquAXP-XASepQ"
             }
         },
         {
@@ -277,5 +294,5 @@
             }
         }
     ],
-    "ref": "aMmsYBYBrP9iNFpj3DPLa4tXkm02lfOHHomj6sVKfF2Yh1OG5UBweTiFTbYkkA9CEwtmVU8cH37urNfpBsGFtA"
+    "ref": "aMmsYBYBrP9iNFpj3DPLa-ZeZHfWDmrUT_wyR077MNhmm5sK3dO8mgbRA7p23sWDLxyOycQ1O7kYhlcN23vIfQ"
 }
