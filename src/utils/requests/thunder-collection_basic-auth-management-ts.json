@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "basic-auth-management-ts",
     "collectionId": "0ace1979-fd34-4536-adfe-c5def9091371",
-    "dateExported": "2025-02-02T23:23:12.515Z",
+    "dateExported": "2025-02-03T13:09:55.477Z",
     "version": "1.2",
     "folders": [
         {
@@ -216,7 +216,7 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2025-02-02T23:08:40.960Z",
-            "modified": "2025-02-02T23:11:26.985Z",
+            "modified": "2025-02-03T12:36:14.321Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -225,10 +225,57 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\":\"admin@admin.com\",\n  \"password\":\"12345678\"\n}",
+                "raw": "// {\n//   \"email\":\"admin@admin.com\",\n//   \"password\":\"12345678\"\n// }\n\n{\n  \"email\":\"user@user.com\",\n  \"password\":\"12345678\"\n}\n\n",
                 "form": []
+            }
+        },
+        {
+            "_id": "867faa28-43e8-4745-b4f4-e4ee685c9f78",
+            "colId": "0ace1979-fd34-4536-adfe-c5def9091371",
+            "containerId": "187976cd-27a6-41fa-bee1-ef4775f14206",
+            "name": "Profile",
+            "url": "http://localhost:4000/api/v1/auth/profile",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2025-02-03T01:45:21.167Z",
+            "modified": "2025-02-03T12:36:34.354Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjIsInVzZXJfaWQiOjJ9LCJpYXQiOjE3Mzg1ODYxNzQsImV4cCI6MTczODU4OTc3NH0.yrn0dQ-x8eSX22gCRus4uPYH297w3iJ0bYIhmy6y9Fc"
+            }
+        },
+        {
+            "_id": "77ede265-8155-4b45-8b78-24816c005f1b",
+            "colId": "0ace1979-fd34-4536-adfe-c5def9091371",
+            "containerId": "187976cd-27a6-41fa-bee1-ef4775f14206",
+            "name": "Register",
+            "url": "http://localhost:4000/api/v1/auth/register",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2025-02-03T12:46:59.867Z",
+            "modified": "2025-02-03T12:49:36.784Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Guest\",\n  \"surname\":\"Guest User\",\n  \"email\":\"guest@guest.com\",\n  \"password\":\"12345678\",\n  \"role_id\":1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjIsInVzZXJfaWQiOjJ9LCJpYXQiOjE3Mzg1ODYxNzQsImV4cCI6MTczODU4OTc3NH0.yrn0dQ-x8eSX22gCRus4uPYH297w3iJ0bYIhmy6y9Fc"
             }
         }
     ],
-    "ref": "aMmsYBYBrP9iNFpj3DPLa2d0SeMF_aKzpHc7OmxZ2tpoP7hgKY-kmFWwyubqepAx6Fk4lmVIKh7ScqbFVFPWpw"
+    "ref": "aMmsYBYBrP9iNFpj3DPLa4tXkm02lfOHHomj6sVKfF2Yh1OG5UBweTiFTbYkkA9CEwtmVU8cH37urNfpBsGFtA"
 }
