@@ -6,12 +6,13 @@
 -   **Instalación y configuración** de TypeORM con MySQL, class-validator y class-transformer.
 -   **CRUD de Roles**: Crear, leer, actualizar y eliminar roles. 👥
 -   **CRUD de Usuarios**: Crear, leer, actualizar y eliminar usuarios. 👤
+-   **Módulo de Autenticación**: Login, registro y perfil de usuario. 🔐
 
 ## 🚀 Próximamente...
 
 En este proyecto, exploraremos cómo implementar un sistema de autenticación básico, por aca una introducción:
 
--   **Módulo de Autenticación**: Login, registro y perfil de usuario. 🔐
+-   **Crear Seeders**: para tener datos de prueba iniciales.
 -   **Protección de Rutas**: Restringir el acceso a rutas según el rol del usuario. 🛡️
 
 ---

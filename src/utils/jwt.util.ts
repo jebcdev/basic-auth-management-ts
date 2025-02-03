@@ -52,7 +52,7 @@ export class JwtUtil {
             const decoded = jwt.verify(token, this.JWT_SECRET) as jwt.JwtPayload;
 
             // Validar el payload del token
-            if (!decoded.email || typeof decoded.isAdmin === "undefined") {
+            if (!decoded?.data?.role_id ||!decoded?.data?.user_id) {
                 throw new Error("Invalid token payload");
             }
 

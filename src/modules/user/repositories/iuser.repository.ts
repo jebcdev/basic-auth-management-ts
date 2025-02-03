@@ -21,7 +21,7 @@ export interface IUserRepository {
 
     // Crea un nuevo usuario en la base de datos.
     // Devuelve el UserEntity creado o null si falla la operación.
-    createNew(usuarioe: UserEntity): Promise<UserEntity | null>;
+    createNew(user: UserEntity): Promise<UserEntity | null>;
 
     // Actualiza un usuario existente por su ID.
     // Devuelve un UpdateResult si la actualización es exitosa, o null si falla.
