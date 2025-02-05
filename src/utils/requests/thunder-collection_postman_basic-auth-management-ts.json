@@ -1,0 +1,489 @@
+{
+    "info": {
+        "_postman_id": "45b1c35e-4e0b-4c83-8c8f-721bd5903ff1",
+        "name": "basic-auth-management-ts",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Root",
+            "item": [
+                {
+                    "name": "Root",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/",
+                            "path": [
+                                "api",
+                                "v1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Seeder",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/seed/rolesusers",
+                            "path": [
+                                "api",
+                                "v1",
+                                "seed",
+                                "rolesusers"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Roles",
+            "item": [
+                {
+                    "name": "GetAll",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/roles",
+                            "path": [
+                                "api",
+                                "v1",
+                                "roles"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjEsInVzZXJfaWQiOjF9LCJpYXQiOjE3Mzg3NTQzNTYsImV4cCI6MTczODc1Nzk1Nn0._KgrJZ7jiCy6313p2ZRrzyruKn0yAvhs395fEf5uyBs",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "GetById",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/roles/1",
+                            "path": [
+                                "api",
+                                "v1",
+                                "roles",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "CreateNew",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/roles/",
+                            "path": [
+                                "api",
+                                "v1",
+                                "roles"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"User\",\n  \"description\":\"Regular System User\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "UpdateById",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/roles/3",
+                            "path": [
+                                "api",
+                                "v1",
+                                "roles",
+                                "3"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n   \"description\":\"System Administrator\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "DeleteById",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/roles/1",
+                            "path": [
+                                "api",
+                                "v1",
+                                "roles",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjIsInVzZXJfaWQiOjJ9LCJpYXQiOjE3Mzg3NTQyOTcsImV4cCI6MTczODc1Nzg5N30.X2A_u-AOTcgBSi-BSyUHnRMdXXNMlS5MVB7Vckn7H4g",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "GetAll",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/users",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "GetById",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/users/1",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        }
+                    }
+                },
+                {
+                    "name": "CreateNew",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/users/",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"Administrator\",\n  \"surname\":\"System\",\n  \"email\":\"admin@admin.commm\",\n  \"password\":\"12345678\",\n  \"role_id\":1\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjEsInVzZXJfaWQiOjF9LCJpYXQiOjE3Mzg3NTQzNTYsImV4cCI6MTczODc1Nzk1Nn0._KgrJZ7jiCy6313p2ZRrzyruKn0yAvhs395fEf5uyBs",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "UpdateById",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/users/1",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"password\":\"12345678\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "DeleteById",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/users/4",
+                            "path": [
+                                "api",
+                                "v1",
+                                "users",
+                                "4"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"New Role | Updated\",\n  \"description\":\"It is a test\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjEsInVzZXJfaWQiOjF9LCJpYXQiOjE3Mzg3NTQzNTYsImV4cCI6MTczODc1Nzk1Nn0._KgrJZ7jiCy6313p2ZRrzyruKn0yAvhs395fEf5uyBs",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/auth/login",
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"admin@admin.com\",\n  \"password\":\"12345678\"\n}\n\n// {\n//   \"email\":\"user@user.com\",\n//   \"password\":\"12345678\"\n// }\n\n"
+                        }
+                    }
+                },
+                {
+                    "name": "Profile",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/auth/profile",
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "profile"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjEsInVzZXJfaWQiOjF9LCJpYXQiOjE3Mzg2MTk4OTksImV4cCI6MTczODYyMzQ5OX0.57t96OOZaYcx9KIk3MvNL7K3D3bA49LquAXP-XASepQ",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:4000/api/v1/auth/register",
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "register"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "4000"
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"Guest\",\n  \"surname\":\"Guest User\",\n  \"email\":\"guest@guest.com\",\n  \"password\":\"12345678\",\n  \"role_id\":1\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InJvbGVfaWQiOjIsInVzZXJfaWQiOjJ9LCJpYXQiOjE3Mzg1ODYxNzQsImV4cCI6MTczODU4OTc3NH0.yrn0dQ-x8eSX22gCRus4uPYH297w3iJ0bYIhmy6y9Fc",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
