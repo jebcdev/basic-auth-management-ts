@@ -8,14 +8,8 @@
 -   **CRUD de Usuarios**: Crear, leer, actualizar y eliminar usuarios. 👤
 -   **Módulo de Autenticación**: Login, registro y perfil de usuario. 🔐
 -   **Crear Seeders**: para tener datos de prueba iniciales.
-
-## 🚀 Próximamente...
-
-En este proyecto, exploraremos cómo implementar un sistema de autenticación básico, por aca una introducción:
-
 -   **Protección de Rutas**: Restringir el acceso a rutas según el rol del usuario. 🛡️
 
----
 
 ## 🛠️ Funcionalidades
 
